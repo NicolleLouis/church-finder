@@ -36,7 +36,7 @@ class Map:
         while self.has_changed:
             print("######")
             self.service.iteration()
-            self.visualisation.clusters()
+            self.visualisation.graph()
             self.turn_number += 1
             print(self.turn_number)
 

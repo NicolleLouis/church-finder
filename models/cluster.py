@@ -1,4 +1,5 @@
 from services.barycenter import Barycenter
+from visualisation.cluster import ClusterVisualisation
 
 
 class Cluster:
@@ -9,6 +10,7 @@ class Cluster:
         self.centroid = centroid_position
         self.points = []
         self.has_changed = True
+        self.visualisation = ClusterVisualisation(self)
 
     def __str__(self):
         return f"centroid: {self.centroid} ({len(self.points)} points)"
